@@ -11,7 +11,20 @@ public class FizzBuzzGame {
     private int num3 = 7;
 
     public void start(int count) {
-
+        String result;
+        for (int i = 1; i <= count; i++) {
+            result = "";
+            if (isContainNumber1(i)) {
+                result = getFizzIfContainNumber1(i);
+            } else {
+                result += getFizzIfMultipleOfNumber1(i);
+                result += getBuzzIfMultipleOfNumber2(i);
+                result += getWhizzIfMultipleOfNumber2(i);
+            }
+            if (result.length() == 0)
+                result = String.valueOf(i);
+            results.add(result);
+        }
     }
 
     public List<String> getResults() {
