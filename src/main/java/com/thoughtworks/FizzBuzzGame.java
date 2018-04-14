@@ -7,6 +7,7 @@ import java.util.List;
 public class FizzBuzzGame {
     private List<String> results = new ArrayList<>();
     private int num1 = 3;
+    private int num2 = 5;
 
     public void start(int count) {
 
@@ -24,15 +25,23 @@ public class FizzBuzzGame {
         return isMultipleOfNumber1(num) ? "Fizz" : "";
     }
 
+    public String getBuzzIfMultipleOfNumber2(int num) {
+        return isMultipleOfNumber2(num) ? "Buzz" : "";
+    }
+
+    private boolean isMultipleOfNumber2(int num) {
+        return num % num2 == 0;
+    }
+
     private boolean isMultipleOfNumber1(int num) {
         return num % num1 == 0;
     }
+
     private boolean isContainNumber1(int num) {
         if (num / 10 == 0)
             return num == num1;
         return isContainNumber1(num % 10) || isContainNumber1(num / 10);
     }
-
 
 }
 

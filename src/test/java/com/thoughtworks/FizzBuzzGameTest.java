@@ -33,4 +33,14 @@ public class FizzBuzzGameTest {
         assertEquals(fizzBuzzGame.getFizzIfMultipleOfNumber1(7),"");
     }
 
+    @Test
+    public void should_return_Buzz_when_multiple_of_5() {
+        assertEquals(fizzBuzzGame.getBuzzIfMultipleOfNumber2(10),"Buzz");
+    }
+
+    @Test
+    public void should_return_empty_when_not_multiple_of_5() {
+        assertEquals(fizzBuzzGame.getBuzzIfMultipleOfNumber2(7),"");
+    }
+
 }
