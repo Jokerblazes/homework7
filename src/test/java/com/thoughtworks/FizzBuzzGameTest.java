@@ -24,12 +24,13 @@ public class FizzBuzzGameTest {
     }
 
     @Test
-    public void show_return_Fizz_when_multiple_of_3() {
+    public void should_return_Fizz_when_multiple_of_3() {
         assertEquals(fizzBuzzGame.getFizzIfMultipleOfNumber1(6),"Fizz");
     }
 
     @Test
-    public void show_return_empty_when_not_multiple_of_3() {
+    public void should_return_empty_when_not_multiple_of_3() {
         assertEquals(fizzBuzzGame.getFizzIfMultipleOfNumber1(7),"");
     }
+
 }
