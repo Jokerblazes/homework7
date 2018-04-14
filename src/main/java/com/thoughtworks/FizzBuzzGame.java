@@ -8,6 +8,7 @@ public class FizzBuzzGame {
     private List<String> results = new ArrayList<>();
     private int num1 = 3;
     private int num2 = 5;
+    private int num3 = 7;
 
     public void start(int count) {
 
@@ -29,6 +30,14 @@ public class FizzBuzzGame {
         return isMultipleOfNumber2(num) ? "Buzz" : "";
     }
 
+    public String getWhizzIfMultipleOfNumber2(int num) {
+        return isMultipleOfNumber3(num) ? "Whizz" : "";
+    }
+
+    private boolean isMultipleOfNumber3(int num) {
+        return num % num3 == 0;
+    }
+
     private boolean isMultipleOfNumber2(int num) {
         return num % num2 == 0;
     }
@@ -42,7 +51,6 @@ public class FizzBuzzGame {
             return num == num1;
         return isContainNumber1(num % 10) || isContainNumber1(num / 10);
     }
-
 }
 
 
