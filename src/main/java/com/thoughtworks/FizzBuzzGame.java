@@ -20,6 +20,13 @@ public class FizzBuzzGame {
         return isContainNumber1(num) ? "Fizz" : "";
     }
 
+    public String getFizzIfMultipleOfNumber1(int num) {
+        return isMultipleOfNumber1(num) ? "Fizz" : "";
+    }
+
+    private boolean isMultipleOfNumber1(int num) {
+        return num % num1 == 0;
+    }
     private boolean isContainNumber1(int num) {
         if (num / 10 == 0)
             return num == num1;

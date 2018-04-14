@@ -22,4 +22,14 @@ public class FizzBuzzGameTest {
     public void should_return_empty_when_not_hava_3() {
         assertEquals(fizzBuzzGame.getFizzIfContainNumber1(4),"");
     }
+
+    @Test
+    public void show_return_Fizz_when_multiple_of_3() {
+        assertEquals(fizzBuzzGame.getFizzIfMultipleOfNumber1(6),"Fizz");
+    }
+
+    @Test
+    public void show_return_empty_when_not_multiple_of_3() {
+        assertEquals(fizzBuzzGame.getFizzIfMultipleOfNumber1(7),"");
+    }
 }
